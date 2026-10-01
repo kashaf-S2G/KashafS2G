@@ -1,0 +1,1 @@
+ALTER TABLE public.crawl_settings ADD COLUMN IF NOT EXISTS auto_enabled boolean NOT NULL DEFAULT true;

@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.sync_ad_status_from_raw() FROM PUBLIC, anon, authenticated;

@@ -1,0 +1,1 @@
+ALTER TABLE public.project_source_info ADD COLUMN IF NOT EXISTS db_display_name text, ADD COLUMN IF NOT EXISTS project_display_name text, ADD COLUMN IF NOT EXISTS webhook_id bigint, ADD COLUMN IF NOT EXISTS last_sync_error text;

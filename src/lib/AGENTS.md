@@ -1,0 +1,4 @@
+- Problems: extracted only inside the unified ad analysis (raw-ad-analyzer + unified-ad-prompt.ts, raw data only); problems.server.ts reuses/creates pb_statements ids and links ad_statements + pb_statement_products; old pb_extract removed; Review & Check runs manually from the page; why: one AI call per ad, Problem is a first-class entity.
+- Review & Check: per Problem↔Product AI verdicts saved as pending in pb_link_reviews; changes applied only on user approval with re-validation (stale otherwise); no auto-merge; why: AI result ≠ user approval.
+- Problems/Benefits read layer: get_pb_statements_page (SECURITY INVOKER, RLS) + getPbStatementsPage server fn; why: mirrors get_products_page/getProductsPageDb pattern.
+- Review & Check (problems page) runs as a background job in pb_review_jobs, worker /api/public/pb-review/tick self-hops via call_app_at; page only polls/controls; why: survives closing the page or losing connection.

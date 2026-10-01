@@ -1,0 +1,12 @@
+REVOKE EXECUTE ON FUNCTION public.consume_trial_tokens(uuid, integer) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.release_stale_ai_holds(uuid) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.hold_ai_balance(uuid, numeric) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.settle_ai_hold(uuid, numeric, uuid) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.release_ai_hold(uuid) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.credit_wallet(uuid, numeric, text, text, text, uuid, uuid) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.acquire_crawl_run_for(uuid, text) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.seed_demo_data(uuid) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.claim_legacy_records_for(uuid) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.get_discovery_cron_token() FROM anon, authenticated;
+GRANT EXECUTE ON FUNCTION public.consume_trial_tokens(uuid, integer) TO service_role;
+GRANT EXECUTE ON FUNCTION public.release_stale_ai_holds(uuid) TO service_role;

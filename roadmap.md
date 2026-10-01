@@ -1,0 +1,26 @@
+# Roadmap
+- [x] Fix clipped Top10 product cards on mobile: show all ranking details and actions without horizontal scrolling.
+- [x] Add an explicit select button on product cards and match Top10 card composition to products.
+- [x] Fit exactly three fixed-height product cards on mobile and select by pressing the full card.
+- [x] Show full available product descriptions across the card width, remove excess space, and stop generating 20-word descriptions.
+- [x] Inspect last single-page competitor crawl and prevent silent zero/incomplete success
+- [x] Remove 5-min limit on manual crawls; paused tasks persist until manual resume/cancel
+- [ ] Scheduled competitor ad crawl: keep as-is (5 min) — awaiting user settings later
+- [x] Competitor collector 5-part prompt audit + flow tests (new/existing/duplicate/empty/zero-AI) — COMPLETED / CLOSED
+- [ ] Collector UI audit details (per-path failure reasons, timeout count) — waiting for user request
+- [ ] Live crash/stop/resume scenario tests against the real database — waiting for user request
+- [x] Crawl selected competitors only + "اكتفيت بهذا القدر" button — COMPLETED / CLOSED
+- [x] Kashaf perf/images task (items 1-7,10,11): FB copy failure reason, cached signed URLs, thumbnails, lazy, load/fail/none states, onError, staleTime 60s, no duplicate competitors fetch — COMPLETED / CLOSED
+- [ ] Kashaf perf items 8, 9, 12 — STOPPED per user rule: same results impossible without redesign (grouping/filter logic is client-side; view already lean). Item 3 still open.
+- [x] Backend-First Phase 3 (Ads): ads page uses DB search/filter/sort/paging/counts + ?compare=1 parity panel — COMPLETED / CLOSED
+- [x] Backend-First Phase 0 (measurement): counts, sizes, indexes, collation, old vs new timings — COMPLETED / CLOSED
+- [ ] Backend-First Phase 4 (Products): inspection done; STOPPED before new RPC — awaiting user decision (options A/B/C)
+- [x] Backend-First prompt status inspection (phases 0-9 vs code) — COMPLETED / CLOSED
+- [x] Backend-First + Mini Browser prompt inspection (re-check vs current code) — COMPLETED / CLOSED
+- [ ] Backend-First step 1 (/competitors): inspected; STOPPED before new RPC get_competitors_page — awaiting user approval
+- [ ] Backend-First step 2 (/top10) — queued after step 1
+- [ ] Backend-First step 3 (product delete/update as one server operation) — queued
+- [ ] Backend-First step 4 (Problems & Benefits) — queued
+- [ ] Backend-First step 5 (cache/prefetch, "All", Select All, AI search) — queued
+- [x] Kashaf unified Problem architecture (unified prompt in ad analysis, pb_extract stopped, Review & Check, tests) — COMPLETED / CLOSED
+- [x] Review & Check v2: per-link verdicts, pending results, per-result approve/reject, no auto-apply/merge

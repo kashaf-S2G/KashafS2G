@@ -1,0 +1,2 @@
+ALTER TABLE public.raw_ad_analysis_control ADD COLUMN IF NOT EXISTS run_started_at timestamptz;
+UPDATE public.raw_ad_analysis_control c SET run_started_at = (SELECT min(processing_started_at) FROM public.raw_ad_analyses r WHERE r.owner_id=c.owner_id AND processing_started_at > now() - interval '12 hours') WHERE run_started_at IS NULL;

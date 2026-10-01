@@ -1,0 +1,1 @@
+ALTER TABLE public.discovery_state ADD COLUMN IF NOT EXISTS cycle_started_at timestamptz NOT NULL DEFAULT now();

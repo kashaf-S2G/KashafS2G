@@ -1,0 +1,1 @@
+ALTER VIEW public.ads_with_duration SET (security_invoker = on);

@@ -1,0 +1,1 @@
+select public.call_app('/api/public/raw-ads-analyze/tick') as wake_request_id;
